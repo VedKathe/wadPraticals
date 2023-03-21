@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        input{
+            width: 100%;
+            margin: 10px 0 10px 0;
+        }
+    </style>
+    <script>
+        function addData()
+        {
+            const myObj = {name:document.getElementById("name").value,email:document.getElementById("email").value,pass:document.getElementById("pass").value}
+            const myJOSN = JSON.stringify(myObj);
+            localStorage.setItem("MyData",myJOSN);
+        }
+    </script>
+    <div>
+       <h1> Storing data in browser local Storage</h1>
+    </div>
+    <form action="second.html">
+        Enter Name
+        <input type="text" id="name">
+        Enter Email
+        <input type="email" name="" id="email">
+        Enter Password
+        <input type="password" name="" id="pass">
+        <button type="submit" onclick="addData()">Submit</button>
+    </form>
+    </body>
+</html>
