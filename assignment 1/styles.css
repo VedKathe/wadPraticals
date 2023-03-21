@@ -1,0 +1,262 @@
+html * {
+    font-family: 'Roboto Slab', serif;
+}
+
+a {
+    font: normal!important;
+}
+
+body {
+    margin: 0px;
+    color: black;
+}
+
+.container {
+    display: grid;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: lightgray;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper>.left-side>div {
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.imagediv {
+    background-color: gray;
+}
+
+.body-wrapper {
+    margin: 0%;
+    margin-left: 5%;
+    margin-right: 45%;
+    padding-top: 70px;
+    padding-bottom: 77px;
+}
+
+.mainbody-wrapper {
+    position: relative;
+    margin: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    z-index: 1;
+}
+
+.doc-wrapper {
+    background-color: #262626;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid lightgray;
+    box-shadow: 10px 20px 20px #404040;
+    position: relative;
+    z-index: 0;
+    color: white;
+}
+
+.form-wrapper {
+    margin-top: 10px;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.form-wrapper>form>div>input {
+    border: 1px solid black;
+    height: 42px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: lightgray;
+}
+
+#submit {
+    font-family: 'Roboto Slab', serif;
+    background-color: #595959;
+    transition: background-color 0.5s;
+    color: white;
+    border-color: lightgray;
+    border-radius: 5px;
+}
+
+#submit:hover {
+    background-color: gray;
+    border-color: lightgray;
+}
+
+#submit:active {
+    background-color: black;
+}
+
+.buy {
+    width: 10%;
+    height: 8%;
+    margin-top: 20px;
+    margin-left: 43%;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    background-color: #595959;
+    transition: background-color 0.5s;
+    color: white;
+    border-color: gray;
+    border-radius: 5px;
+    box-shadow: 10px 20px 20px #404040;
+}
+
+.buy:hover {
+    background-color: gray;
+    border-color: lightgray;
+}
+
+.buy:active {
+    background-color: black;
+}
+
+.sign-wrapper {
+    text-align: center;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background-color: darkgray;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0.7%;
+    opacity: 0.8;
+}
+
+.froms {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    margin-left: 30%;
+    margin-top: 0.5%;
+    text-align: center;
+    border: solid 2px gray;
+    border-radius: 5px;
+    padding: 60px 0px;
+    width: 600px;
+    background-color: lightgray;
+    opacity: 1;
+}
+
+.froms p,
+input {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.mySlides {
+    display: none;
+    margin-bottom: -50px;
+}
+
+.w3-content {
+    border-bottom: 5px solid lightgray;
+    object-fit: cover;
+}
+
+body input {
+    font-family: 'Roboto Slab', serif;
+}
+
+.medicine-list {
+    margin-top: 40px;
+    margin-left: 40px;
+    list-style: none;
+    background-color: #262626;
+    margin-right: 40px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid gray;
+    color: white;
+    box-shadow: 10px 20px 20px #404040;
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+th {
+    border: 3px solid gray;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border-spacing: 2px;
+    font-size: 28px;
+    color: greenyellow;
+}
+
+td {
+    padding: 10px;
+}
+
+tr {
+    text-align: left;
+    font-size: 24px;
+}
+
+.med-2 {
+    list-style: none;
+    text-align: center;
+    border: 2px solid black;
+    margin-right: 1%;
+}
+
+.med-2 ul {
+    list-style: none;
+    text-align: left;
+    word-break: normal;
+}
+
+.home-img img {
+    object-fit: fill;
+    width: 1533px;
+    height: 100%;
+}
+
+#self {
+    margin-right: 120px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: right;
+}

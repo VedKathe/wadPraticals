@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Appointment</title>
+    <link rel="icon" href="img/Logo.png" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<body>
+    <script>
+        function reg(inputnum, inputeml) {
+            var out = new Array();
+            var x = document.getElementsByName("time");
+            var n = 0;
+            var ano = 1;
+            var number = /^[987]{1}[0-9]{9}/;
+            var email = /^[a-zA-z0-9._-]+@[a-zA-z0-9]+\.[a-zA-z]{2,4}$/;
+
+
+            if (document.getElementById('name').value == "") {
+                out.push("\nEnter Name");
+            }
+
+            if (inputnum.value.match(number)) {
+
+            } else {
+                out.push("\nInvalid phone number");
+
+            }
+
+            if (inputeml.value.match(email)) {
+
+            } else {
+                out.push("\nInvalid email");
+            }
+
+
+            for (var i = 0; i < x.length; i++) {
+                if (x[i].checked) {
+                    n = 1;
+                    globalThis; {
+                        var ckd = x[i].value;
+                    }
+                    break;
+                }
+            }
+
+            if (n == 0) {
+                out.push("\nEnter time");
+            }
+
+            if (!out.length) {
+                out.push("Appointment Booked \n Appointment No." + ano + "\nName           : " + document.getElementById('name').value +
+                    "\nPhone No.   : " + document.getElementById('phone').value + "\nEmail             : " +
+                    document.getElementById('email').value + "\nIllness            : " + document.getElementById('ill').value +
+                    "\nTime             : " + ckd);
+
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i].checked) {
+                        out.push();
+                        break;
+                    }
+                }
+                ano = ano + 1;
+            }
+            alert(out);
+        }
+    </script>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper ">
+                    <a href="index2.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper ">
+                    <a href="store.html">Medical Store</a>
+                </div>
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="doctor.html">Appointment</a>
+                </div>
+
+                <div class="nav-link-wrapper ">
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <img src="img/Logo.png" style="margin: -30px; margin-right: 5px; padding: 0px;" height="80px" width="80px" alt="">
+
+                </div>
+            </div>
+        </div>
+        <div class="imagediv" style=" padding-bottom: 8%;" id="id01">
+            <div class="body-wrapper">
+                <img src="https://cdn.dribbble.com/users/1859102/screenshots/4723184/1_si_2.gif" height="400" width="400" style=" transform: translate(900px,20px); border: 5px solid lightgrey; border-radius: 50%; position:absolute; z-index:2 ; border-top-right-radius: 0px;box-shadow: 10px 20px 20px #404040; border-bottom-left-radius: 0px;"
+                    alt="">
+                <div class="doc-wrapper" style="transform: translate(0px,50px);">
+
+                    <div class="form-wrapper" style="text-align: center;">
+                        <div style="font-size: 30px;"> Appointment Form </div>
+
+                        <form name="form1" action="" style="margin-left: 30px;">
+                            <br>
+                            <div style="text-align: center;">
+                                Name:
+                                <input style="margin-right: 20px; margin-left: 10px;" type="text" name="name" id="name" value=""> Phone No.:
+                                <input style="margin-left: 10px;" type="text" name="phone" id="phone" value="">
+                            </div>
+
+                            <div style="text-align: center;"> Email:
+                                <input type="text" name="email" id="email" value="" style=" margin-left: 10px; margin-right: 18px; "> Illness :
+                                <select style=" background-color: lightgray; height: 45px; width: 207px; margin-left: 32px; font-family: 'Roboto Slab', serif; " name=" " id="ill">
+                            <option >Allergies</option>
+                            <option >Colds and Flu</option>
+                            <option >Diarrhea</option>
+                            <option >Headaches</option>
+                            <option >Chest Cold</option>
+                            <option >Stomach Aches</option>                       
+                        </select>
+                            </div>
+                            <br>
+                            <div style="text-align: center; ">
+                                Time:
+                                <input style="height: 15px;width: 15px; " type="radio" name="time" id="time" value="9:00 AM">9:00 AM
+                                <input style="height: 15px;width: 15px; " type="radio" name="time" id="time" value="12:00 PM">12:00 PM
+                                <input style="height: 15px;width: 15px; " type="radio" name="time" id="time" value="3:00 PM">3:00 PM
+
+                            </div>
+                            <br>
+                            <div style="text-align: center;">
+
+                                <input id="submit" onclick="reg(document.form1.phone,document.form1.email)" type="submit" value="Appoint">
+                                <input id="submit" onclick="" type="button" value="Reset ">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
