@@ -17,10 +17,13 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToHome() {
-    
-    
+  goToHome() { 
     this._router.navigate(["home-page"]);
+  }
+
+  goToRegister() {
+  
+    this._router.navigate(["signup-page"]);
   }
 
 }
