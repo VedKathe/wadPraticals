@@ -3,22 +3,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Login Page </title>
-<style> 
-Body {
+<style>
+
+body {
   font-family: Calibri, Helvetica, sans-serif;
-  background-color: pink;
+ 
+    padding: 10px;
 }
 button { 
        background-color: #4CAF50; 
        width: 100%;
         color: orange; 
         padding: 15px; 
-        margin: 10px 0px; 
-        border: none; 
+        margin: 10px; 
+        border: 2px solid darkgreen; 
         cursor: pointer; 
-         } 
+    } 
  form { 
-        border: 3px solid #f1f1f1; 
+        border: 3px solid green; 
+        
     } 
  input[type=text], input[type=password] { 
         width: 100%; 
@@ -39,23 +42,28 @@ button {
       
    
  .container { 
-        padding: 25px; 
+        padding: 25px;
+         
         background-color: lightblue;
     } 
 </style> 
 </head>  
 <body>  
     <h1 style="text-align: center;"> Student Login Form </h1>  
-    <form #loginform = "ngForm" [(ngModel)] = "pre">
+    <form #loginform = "ngForm">
         
         <div class="container"> 
             <label>Username : </label> 
             <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="user">
             <label>Password : </label> 
             <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="pass">
-            <a href="" routerLink="/signup-page"> Register </a> 
+            <!-- <a href="" routerLink="/signup-page"> Register </a>  -->
 
-            <button type="submit" (click)="goToHome()">Login</button> 
+            <div style="display:flex ">
+                <button (click)=" goToRegister()">Register</button> 
+                <button type="submit" (click)="goToHome()">Login</button> 
+
+            </div>
              
         </div> 
     </form>   
